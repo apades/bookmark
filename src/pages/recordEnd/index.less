@@ -1,0 +1,110 @@
+@import "../../style/global.css";
+
+body{
+  padding: 0 240px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.85);
+}
+#app{
+  .f-center();
+}
+.container{
+  width: 100%;
+  max-width: 950px;
+  padding: 40px 0;
+  video{
+    width: 100%;
+  }
+}
+.control-pannel{
+  margin-top: 16px;
+  input{
+    display: block;
+    flex: 1;
+    margin-right: 10px;
+    padding-left: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 24px;
+    background-color: transparent;
+    border: none;
+    // border-radius: 4px;
+
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: transparent;
+      border-right-width: 1px !important;
+      outline: 0;
+      box-shadow: none;
+    }
+    &:focus{
+      background: rgba(6, 105, 255, 0.5);
+    }
+  }
+  button{
+    .wh(300px,40px);
+    .f-i-center();
+
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    img{
+      margin-right: 6px;
+    }
+  }
+}
+.feedback-pannel{
+  width: 100%;
+  min-height: 80px;
+  margin-top: 37px;
+  background: #2E3034;
+  border-radius: 2px;
+
+  .left-img{
+    display: none;
+    width: 262px;
+    height: 80px;
+    @media (min-width: 1440px){
+      &.i-1440{
+        display: block;
+      }
+    }
+    @media (max-width: 1439px) and (min-width: 1367px){
+      &.i-1366{
+        display: block;
+        margin-right: -20px;
+      }
+    }
+    @media (max-width: 1366px) {
+      &.i-1280{
+        display: block;
+        margin-right: -40px;
+      }
+    }
+  }
+  p{
+    margin-right: 20px;
+    margin-left: 40px;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 22px;
+    word-break: break-word;
+  }
+  button{
+    .wh(93px,32px);
+
+    margin-right: 27px;
+    margin-left: auto;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    border-radius: 4px;
+  }
+}

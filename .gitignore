@@ -1,0 +1,11 @@
+.idea
+dist
+dist_prod
+node_modules
+coverage
+/src/assets/test.mkv
+debug.log
+.DS_Store
+videoClip-*.zip
+yarn-error.log
+yarn.lock

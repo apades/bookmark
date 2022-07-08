@@ -1,0 +1,29 @@
+.rc-time-input{
+  // .wh(100px,50px);
+  .f-center();
+
+  position: relative;
+  padding: 4px 16px;
+  overflow: hidden;
+  color: white;
+  line-height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+
+  &.focusing{
+    background: rgba(6, 105, 255, 0.5);
+  }
+  input{
+    // .wh(100%);
+    width: 20px;
+    padding: 0;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &::selection{
+      // background-color: transparent;
+    }
+  }
+}

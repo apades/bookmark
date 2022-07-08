@@ -1,0 +1,50 @@
+body{
+  min-width: 300px;
+  height: initial !important;
+  min-height: 150px;
+  padding: 20px 5px;
+
+  ul{
+    padding-left: 0;
+  }
+  li{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    -webkit-line-clamp: 1; //设置多行的行数
+    -webkit-box-orient: vertical;
+  }
+  .layer{
+    background: #151A26;
+
+    .unsupport-modal{
+      display: flex;
+      flex-direction: column;
+      width: 380px;
+      min-height: 100%;
+      padding: 24px 22px;
+      border-radius: 0;
+    }
+    p{
+      margin-bottom: 24px;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: normal;
+      font-size: 14px;
+      font-family: Roboto;
+      font-style: normal;
+      line-height: 16px;
+      text-align: center;
+    }
+    button{
+      .wh(152px,40px);
+  
+      display: block;
+      margin: auto auto 0;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: Roboto;
+      font-style: normal;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "watch": [
+        "build/webpack.dev.js",
+        "./package.json",
+        "./nodemon.json"
+    ]
+}

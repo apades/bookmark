@@ -1,0 +1,253 @@
+/************************************   */
+
+/*********** Veriables ***************/
+
+/************************************   */
+
+@primaryColor: #0669FF;
+@primary-color: #0669FF;
+@primaryActiveColor: #3d84ff;
+@primaryTextColor: #373c44;
+@secondaryTextColor: #6e6e6e;
+@baseBorderRadius: 4px;
+
+@dropColor: #e9f2fe;
+@sideLinkHoverColor: #F5F5F5;
+
+@small-screen-width: 1280px;
+@large-screen-width: 1900px;
+
+@icon_img_width: 990px;
+
+@slack: 0;
+@trello: 1;
+@asana: 2;
+@googleDrive: 3;
+@github: 4;
+@dropbox: 5;
+@box: 6;
+@jira: 7;
+@clickUp: 8;
+
+@icon-ss-y: -72px;
+@icon-ss-size: 16px;
+
+.icon-ss-position(@which) {
+  background-position: (-@which * @icon-ss-size) - 180 @icon-ss-y;
+}
+
+@icon-s-y: -68px;
+@icon-s-size: 20px;
+
+.icon-s-position(@which) {
+  background-position: -@which * @icon-s-size @icon-s-y;
+}
+
+@icon-y: -142px;
+@icon-size: 48px;
+
+.icon-position(@which) {
+  background-position: -@which * @icon-size @icon-y;
+}
+
+@icon-tiny-y: -122px;
+@icon-tiny-size: 20px;
+
+.icon-tiny-position(@which) {
+  background-position: -@which * @icon-tiny-size @icon-tiny-y;
+}
+
+@logo-y: -26px;
+@logo-size: 110px;
+
+.logo-position(@which) {
+  background-position: -@which * @logo-size @logo-y;
+}
+
+@logo-s-y: 0px;
+@logo-s-size: 68px;
+
+.logo-s-position(@which) {
+  background-position: -@which * @logo-s-size @logo-s-y;
+}
+
+@icon-m-y: -88px;
+@icon-m-size: 34px;
+.icon-m-position(@which) {
+  background-position: -@which * @icon-m-size @icon-m-y;
+}
+
+@freeColor: #596377;
+@personalColor: #45ce90;
+@proColor: #f0a452;
+@teamColor: #0669FF;
+
+@skeletonBgColor: #eee;
+
+/************************************   */
+
+/************** Mixins ***************/
+
+/************************************   */
+.wh(@w,@h:@w) {
+  width: @w;
+  height: @h;
+}
+.mwh(@w,@h:@w) {
+  max-width: @w;
+  max-height: @h;
+}
+.dm(@rules) {
+  @media screen /* and (min-width: 996px) */ and (max-width: 1600px) {
+    @rules()
+  }
+}
+.dm2(@rules) {
+  @media screen /* and (min-width: 996px) */ and (max-width: 1140px) {
+    @rules()
+  }
+}
+
+.bg-image(@url) {
+  background-image: ~"url(@{url}.png)";
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    background-image: ~"url(@{url}@2x.png)";
+  }
+}
+
+.bg-image-w(@width, @url) {
+  background-image: ~"url(@{url}.png)";
+  background-size: @width auto;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    background-image: ~"url(@{url}@2x.png)";
+  }
+}
+
+.text-ellipsis(@width) {
+  max-width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.s-dot() {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.center() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.custom-scrollbar() {
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: @baseBorderRadius;
+  }
+  &::-webkit-scrollbar-track:hover {
+    // background-color: #f4f4f4;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    border-radius: 16px;
+    // border: 5px solid #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // background-color: #babac0;
+    background-color: #c1c1c1;
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 16px;
+
+    &:hover {
+      background-color: #7d7d7d;
+    }
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.scrollbar(){
+  .custom-scrollbar();
+}
+
+.mobile(@rules){
+  @media screen and (max-width: 768px){
+    @rules()
+  }
+}
+
+
+/************************************   */
+
+/*************** Antd ****************/
+
+/************************************   */
+.ant-select-arrow {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+.f-center(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-i-center(){
+  display: flex;
+  align-items: center;
+}
+.ab-center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+//网格布局
+.grid-box(@width){
+  display: grid;
+  grid-template-columns: repeat(auto-fill, @width);
+  justify-content: space-around;
+}
+
+.line-clamp(@line){
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @line; //设置多行的行数
+  -webkit-box-orient: vertical;
+}
+.en(@rules){
+  body[lang='en']{
+    @rules()
+  }
+}
+
+.d(@rules){
+  @media screen and (min-width: 992px){
+    @rules()
+  }
+}
+
+.m(@rules){
+  @media screen and (max-width: 991px){
+    @rules()
+  }
+}

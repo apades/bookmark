@@ -1,0 +1,52 @@
+{
+  "name": "recorder-test",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Build an Extension!",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "bookmarks",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.js"
+      ],
+      "matches": [
+        "*://*/*",
+        "<all_urls>"
+      ],
+      "use_dynamic_url": true
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'",
+    "sandbox": "sandbox allow-scripts;default-src 'self'"
+  },
+  "chrome_url_overrides":{
+    "newtab": "home.html"
+  }
+}

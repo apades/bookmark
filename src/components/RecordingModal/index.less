@@ -1,0 +1,71 @@
+.recording-modal{
+  .ant-modal-close{
+    display: none;
+  }
+  .ant-modal-content{
+    width: 432px;
+    padding: 24px;
+    // background: #E8E8E9;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.14), 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+  .ant-modal-body{
+    flex-direction: column;
+    padding: 0;
+    .f-center();
+  }
+  .ant-modal-footer{
+    display: none;
+  }
+  .lf-player-container{
+    width: 69px;
+    margin-left: 18px;
+  }
+  .rc-slider{
+    width: 180px;
+    margin-bottom: 10px;
+
+    .rc-slider-track{
+      background-color: #0669FF;
+      transition: width .2s;
+    }
+  }
+  .tips{
+    span:first-child{
+      margin-right: 8px;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 11px;
+      line-height: 13px;
+    }
+    .time{
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  p{
+    margin-top: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+
+    a{
+      text-decoration: underline
+    }
+  }
+  .cancel{
+    margin-top: 16px;
+    margin-left: auto;
+    color: #F55F4E;
+    line-height: 16px;
+    cursor: pointer
+  }
+
+  .record-ok{
+    .wh(68px);
+
+    background: #46DB7A;
+    border-radius: 68px;
+  }
+}

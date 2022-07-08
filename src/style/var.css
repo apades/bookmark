@@ -1,0 +1,20 @@
+:root {
+  --header-height: 60px;
+  --header-menu-user-bgcolor: #0669ff;
+  --color-main: #0669ff;
+  --color-red: #f55f4e;
+  --color-green: #46db7a;
+  --color-orange: #f5894e;
+  --color-blue: #57a5ff;
+  --c-text-main: rgba(0, 0, 0, 0.85);
+  --c-bg-main: #bfbfbf;
+  --c-bg-text: #b3b3b3;
+  --border-strong: 1px solid rgba(0, 0, 0, 0.24);
+  --border-normal: 1px solid rgba(0, 0, 0, 0.08);
+  --box-shadow: 0 2px 4px rgba(55, 60, 68, 0.2);
+  --c-width: 1282px;
+  --t-re: roboto-regular, arial, helvetica, sans-serif;
+  --t-me: roboto-medium, arial, helvetica, sans-serif;
+  --t-se: roboto-bold, arial, helvetica, sans-serif;
+  --font-family: roboto, arial,microsoft yahei, pingfangsc ,helvetica, sans-serif;
+}
